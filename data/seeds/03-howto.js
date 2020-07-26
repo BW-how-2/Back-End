@@ -23,7 +23,7 @@ exports.seed = function (knex, Promise) {
           id: 3
           , name: 'Hang a shelf'
           , description: 'How to hang a simple shelf'
-          , steps: 'Step 1: Determine where you would like to hand your self and using a level and tape measure draw a line and determine where to drill anchor points. Step 2: Drill anchor points and insert the drywall anchor. Step 3: Drill the supports into the anchor points. Step 4: Drill shelf to the supports'
+          , steps: 'Step 1: Determine where you would like to hang your self and using a level and tape measure draw a line and determine where to drill anchor points. Step 2: Drill anchor points and insert the drywall anchor. Step 3: Drill the supports into the anchor points. Step 4: Drill shelf to the supports'
           , category: 'Home'
           , complexity: '20min',
         },
@@ -40,8 +40,24 @@ exports.seed = function (knex, Promise) {
           name: "Start a fire",
           description: "Simple way to start a fire",
           steps: "Step 1: Pile up your wood in fireplace Step 2: add lighter fluid Step 3: light a match and throw it in the lighter fluid and enjoy! ",
-          category: "Home",
+          category: "Outdoor",
           complexity: "5min"
+        },
+        {
+          id: 6,
+          name: "Change a headlight",
+          description: "How to change a headlight on a car that has a non-ressed headlight",
+          steps: "Step 1: Remove pannel over headlight if it applies, remove the bulb from the headlight. Step 2: Clean contacts and add new bulb 3: reattach the blub to the headlight and replace the pannel. ",
+          category: "Automovtive",
+          complexity: "10min"
+        },
+        {
+          id: 7,
+          name: "Hang a painting",
+          description: "How to a hang picture or painting on drywall",
+          steps: 'Step 1: Determine where you would like to hang your picture/painting and using a level and tape measure draw a line and determine where to drill anchor points. Step 2: Drill anchor points and insert the drywall anchor. Step 3: Drill the hook into the anchor points. Step 4: Hang the painting/picture on the hook and use a level to level',
+          category: "Home",
+          complexity: "10min"
         },
       ]);
     });
