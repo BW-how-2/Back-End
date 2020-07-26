@@ -5,7 +5,9 @@ module.exports = {
     getHowTo,
     addHowTo,
     updateHowTo,
-    deleteHowTo
+    deleteHowTo,
+    getByCategory,
+    getByComplexity
 }
 
 function getHowTos() {
@@ -33,4 +35,18 @@ function deleteHowTo(id) {
     return db('howto')
         .where({ id })
         .del(id)
+}
+
+function getByCategory(category) {
+    return db
+        .select('*')
+        .from('howto')
+        .where({ category })
+}
+
+function getByComplexity(complexity) {
+    return db
+        .select('*')
+        .from('howto')
+        .where({ complexity })
 }

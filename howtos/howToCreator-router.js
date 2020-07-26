@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     const newHowTo = req.body
     HowTos.addHowTo(newHowTo)
         .then(howto => {
-            res.status(201).json(howto)
+            res.status(201).json(newHowTo)
         })
         .catch(error => {
             console.log(error)
@@ -24,7 +24,7 @@ router.put('/:id', (req, res) => {
             if (howto) {
                 HowTos.updateHowTo(changes, id)
                     .then(updatedHowTo => {
-                        res.status(200).json(updatedHowTo)
+                        res.status(200).json({ Message: `Updated How-to id: ${id}` })
                     })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find How-to with that id' })
@@ -41,7 +41,7 @@ router.delete('/:id', (req, res) => {
     HowTos.deleteHowTo(id)
         .then(deleted => {
             if (deleted) {
-                res.status(200).json({ removed: deleted })
+                res.status(200).json({ Removed: `How-to with id: ${id}` })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find How-to with that id' })
             }
