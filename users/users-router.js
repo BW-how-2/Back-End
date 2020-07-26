@@ -31,7 +31,6 @@ router.get('/:id', (req, res) => {
         })
 })
 
-
 router.put('/:id', (req, res) => {
     const { id } = req.params
     const changes = req.body
