@@ -33,7 +33,7 @@ describe('how-To end point tests', function () {
             await supertest(server)
                 .post('/api/auth/login')
                 .send({ username: 'test', password: 'test' })
-                .then(async result => token = result.body.jwt_token)
+                .then(async result => token = result.body.token)
             await supertest(server)
                 .post('/api/auth/howto/creator')
                 .send({ name: 'test', description: 'test', steps: 'test', category: 'test' })
