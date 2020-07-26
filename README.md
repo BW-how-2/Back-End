@@ -2,7 +2,7 @@
 How-To
 
 ## Documentation:
-Base URL for Deployed API
+Base URL for Deployed API:
 
 
 ## **Endpoints**
@@ -90,5 +90,173 @@ Returns:
         "role": 2
     },
     "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxMCwidXNlcm5hbWUiOiJzdGV2ZSIsInJvbGUiOjIsImlhdCI6MTU5NTcyNzY0MiwiZXhwIjoxNTk2NTkxNjQyfQ.AObU_nV-7YlrrADdsuFkKO92rNFeY-ajJLX4ulWQvrI"
+}
+```
+### POST /api/auth/howto/creator
+Request Body:
+```
+ {
+     "name": "Start a fire",
+     "description": "Simple way to start a fire",
+     "steps": "Step 1: Pile up your wood in fireplace Step 2: add lighter fluid Step 3: light a match and throw it in the lighter fluid and enjoy! ",
+      "category": "Home",
+     "complexity": "5min"
+ }
+```
+Returns:
+```
+[
+    6
+]
+```
+### GET /api/auth/users
+Returns: 
+```
+[
+    {
+        "id": 1,
+        "username": "mark",
+        "password": "asd",
+        "role": 2
+    },
+    {
+        "id": 2,
+        "username": "user",
+        "password": "asd",
+        "role": 1
+    },
+    {
+        "id": 3,
+        "username": "creator",
+        "password": "asd",
+        "role": 2
+    },
+    {
+        "id": 4,
+        "username": "test",
+        "password": "$2a$10$6VtVm1Ygj.oBISVTkvJig.eggF0FZ5zEXo2TKb7Uwwz0MUBOPAhZa",
+        "role": 2
+    },
+    {
+        "id": 5,
+        "username": "admin",
+        "password": "$2a$10$aHXy8LIckAloSElGhBH3f.aTZL0y6E9cnrKaNqfhNmjmNv412YgCy",
+        "role": 2
+    }
+]
+```
+### GET /api/auth/users/:id
+Returns:
+```
+{
+    "id": 1,
+    "username": "mark",
+    "password": "asd",
+    "role": 2
+}
+```
+### GET /api/auth/howto
+Returns:
+```
+[
+    {
+        "id": 1,
+        "name": "Make a sandwich",
+        "description": "How to make a PB&J sandwich",
+        "steps": "Step 1: Get 2 slices of bread. Step 2: spead peanutbutter on one slice, jelly on the other. Step 3: Combine and Enjoy!",
+        "category": "Food",
+        "complexity": "5min"
+    },
+    {
+        "id": 2,
+        "name": "How to change a tire",
+        "description": "How to change a tire on a car",
+        "steps": "Step 1: Place jack under vehicle and jack up until the desired tire to change is off the ground. Step 2: Remove the lug nuts from the tire. Step 3: Remove old tire and replce it with the new one. Step 4: Tighten the lug nuts. Step 5: Lower the vehicle and you are good to go!",
+        "category": "Automotive",
+        "complexity": "30min"
+    },
+    {
+        "id": 3,
+        "name": "Hang a shelf",
+        "description": "How to hang a simple shelf",
+        "steps": "Step 1: Determine where you would like to hand your self and using a level and tape measure draw a line and determine where to drill anchor points. Step 2: Drill anchor points and insert the drywall anchor. Step 3: Drill the supports into the anchor points. Step 4: Drill shelf to the supports",
+        "category": "Home",
+        "complexity": "20min"
+    },
+    {
+        "id": 5,
+        "name": "Test",
+        "description": "Test",
+        "steps": "test Test test Test",
+        "category": "test",
+        "complexity": "5min"
+    },
+    {
+        "id": 6,
+        "name": "Start a fire",
+        "description": "Simple way to start a fire",
+        "steps": "Step 1: Pile up your wood in fireplace Step 2: add lighter fluid Step 3: light a match and throw it in the lighter fluid and enjoy! ",
+        "category": "Home",
+        "complexity": "5min"
+    }
+]
+```
+### GET /api/auth/howto/:id
+Returns:
+```
+{
+    "id": 1,
+    "name": "Make a sandwich",
+    "description": "How to make a PB&J sandwich",
+    "steps": "Step 1: Get 2 slices of bread. Step 2: spead peanutbutter on one slice, jelly on the other. Step 3: Combine and Enjoy!",
+    "category": "Food",
+    "complexity": "5min"
+}
+```
+### PUT /api/auth/users/:id
+Request Body:
+```
+{
+    "username": "steve",
+    "password": "asd",
+    "role":1
+}
+```
+Returns:
+```
+{
+    "Message": "Updated User"
+}
+```
+### PUT /api/auth/howto/creator/:id
+Request Body:
+```
+{
+        "id": 1,
+        "name": "Make a sandwich",
+        "description": "How to make a PB&J sandwich",
+        "steps": "Step 1: Get 2 slices of bread. Step 2: spead peanutbutter on one slice, jelly on the other. Step 3: Combine and Enjoy!",
+        "category": "Food",
+        "complexity": "6min"
+    }
+```
+Returns:
+```
+{
+    "Message": "Updated How-to id: 1"
+}
+```
+### DELETE /api/auth/howto/creator/:id
+Returns:
+```
+{
+    "Removed": "id: 6"
+}
+```
+### DELETE /api/auth/users/:id
+Returns:
+```
+{
+    "Removed": "User with id: 9"
 }
 ```
