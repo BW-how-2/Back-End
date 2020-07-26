@@ -31,17 +31,6 @@ router.get('/:id', (req, res) => {
         })
 })
 
-router.post('/', (req, res) => {
-    const newUser = req.body
-    Users.addUser(newUser)
-        .then(user => {
-            res.status(201).json(user)
-        })
-        .catch(error => {
-            console.log(error)
-            res.status(500).json({ errorMessage: 'Error adding user' })
-        })
-})
 
 router.put('/:id', (req, res) => {
     const { id } = req.params
@@ -51,7 +40,7 @@ router.put('/:id', (req, res) => {
             if (user) {
                 Users.updateUser(changes, id)
                     .then(updatedUser => {
-                        res.status(200).json(updatedUser)
+                        res.status(200).json({ Message: 'Updated User' })
                     })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find User with that id' })
@@ -65,10 +54,10 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     const { id } = req.params
-    Users.remove(id)
+    Users.deleteUser(id)
         .then(deleted => {
             if (deleted) {
-                res.status(200).json({ removed: deleted })
+                res.status(200).json({ Removed: `User with id: ${id}` })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find User with that id' })
             }

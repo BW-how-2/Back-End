@@ -19,7 +19,6 @@ exports.seed = function (knex, Promise) {
           , category: 'Automotive'
           , complexity: '30min'
         },
-
         {
           id: 3
           , name: 'Hang a shelf'
@@ -27,7 +26,23 @@ exports.seed = function (knex, Promise) {
           , steps: 'Step 1: Determine where you would like to hand your self and using a level and tape measure draw a line and determine where to drill anchor points. Step 2: Drill anchor points and insert the drywall anchor. Step 3: Drill the supports into the anchor points. Step 4: Drill shelf to the supports'
           , category: 'Home'
           , complexity: '20min',
-        }
+        },
+        {
+          id: 4
+          , name: 'Fix a leak'
+          , description: 'Simple way to fix a leaking pipe'
+          , steps: 'Step 1: Turn off water to pipe. Step 2: disconnect the pipe at the leak. Step 3: clean the connection and apply tefflon tape. Step 4: reconnect pipe. Step 5: turn water back on, if still leaking repeat with plummers puddy'
+          , category: 'Home'
+          , complexity: '30min',
+        },
+        {
+          id: 5,
+          name: "Start a fire",
+          description: "Simple way to start a fire",
+          steps: "Step 1: Pile up your wood in fireplace Step 2: add lighter fluid Step 3: light a match and throw it in the lighter fluid and enjoy! ",
+          category: "Home",
+          complexity: "5min"
+        },
       ]);
     });
 };

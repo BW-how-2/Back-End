@@ -31,4 +31,29 @@ router.get('/:id', (req, res) => {
         })
 })
 
+router.get('/category', (req, res) => {
+    const { category } = req.body
+    HowTos.getByCategory(category)
+        .then(howto => {
+            res.status(200).json(howto)
+        })
+        .catch(error => {
+            console.log(error)
+            res.status(500).json({ errorMessage: 'Error getting all the How-To s in that category ' })
+        })
+})
+
+router.get('/complexity', (req, res) => {
+    const { complexity } = req.body
+    HowTos.getByomplexity(complexity)
+        .then(howto => {
+            res.status(200).json(howto)
+        })
+        .catch(error => {
+            console.log(error)
+            HowTos.getByomplexity(complexity)
+            res.status(500).json({ errorMessage: 'Error getting all the How-To s with that complexity' })
+        })
+})
+
 module.exports = router;
