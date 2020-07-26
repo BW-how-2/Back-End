@@ -246,7 +246,7 @@ Request Body:
 Returns:
 ```
 {
-    "Message": "Updated How-to id: 1"
+    "Message": "Updated How-to with id: 1"
 }
 ```
 ### DELETE /api/auth/howto/creator/:id
