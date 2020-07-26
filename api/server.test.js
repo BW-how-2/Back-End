@@ -1,7 +1,7 @@
 const supertest = require('supertest')
 
 const server = require('./server')
-const db = require('../database/dbConfig')
+const db = require('../data/db-config')
 
 
 describe('Login/Register end point tests', function () {
