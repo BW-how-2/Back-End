@@ -258,7 +258,6 @@ Returns:
 ```
 ### DELETE /api/auth/users/:id
 Returns:
->>>>>>> master
 ```
 {
     "Removed": "User with id: 9"
