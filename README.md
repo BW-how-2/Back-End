@@ -250,7 +250,7 @@ Returns:
 Returns:
 ```
 {
-    "Removed": "id: 6"
+    "Removed": "How-to with id: 6"
 }
 ```
 ### DELETE /api/auth/users/:id
