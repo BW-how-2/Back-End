@@ -93,7 +93,7 @@ Returns:
         "password": "$2a$10$/RqzR6JBVXeTYSGHwLdsQOItb56bUB5Hr1RanRyC0b1PayVchwRnO",
         "role": 2
     },
-    "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxMCwidXNlcm5hbWUiOiJzdGV2ZSIsInJvbGUiOjIsImlhdCI6MTU5NTcyNzY0MiwiZXhwIjoxNTk2NTkxNjQyfQ.AObU_nV-7YlrrADdsuFkKO92rNFeY-ajJLX4ulWQvrI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxMCwidXNlcm5hbWUiOiJzdGV2ZSIsInJvbGUiOjIsImlhdCI6MTU5NTcyNzY0MiwiZXhwIjoxNTk2NTkxNjQyfQ.AObU_nV-7YlrrADdsuFkKO92rNFeY-ajJLX4ulWQvrI"
 }
 ```
 ### POST /api/auth/howto/creator
