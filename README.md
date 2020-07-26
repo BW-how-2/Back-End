@@ -40,3 +40,11 @@ How-To's
 | steps | string | yes | no | The steps to complete the How-to |
 | category | string | yes | no | Category of How-to |
 | complexity | string | no | no | Estimated time to complete/difficulty to complete |
+
+Login's
+
+If i need to update the database at any point during the week all users made up until that point will be deleted. These logins will always be available to use.
+| Login | Password | Role |
+| ----- | -------- | ---- |
+| user | asd | user |
+| creator | asd | creator |
