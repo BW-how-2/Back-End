@@ -97,6 +97,7 @@ Returns:
 }
 ```
 ### POST /api/auth/howto/creator
+Request Body:
 ```
  {
      "name": "Start a fire",
