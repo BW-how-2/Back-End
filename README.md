@@ -3,7 +3,7 @@ How-To
 
 ## Documentation:
 
-Base URL for Deployed API:
+Base URL for Deployed API: https://how-to-backend.herokuapp.com/
 
 
 ## **Endpoints**
