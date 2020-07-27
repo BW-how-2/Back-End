@@ -13,8 +13,8 @@ exports.up = function (knex) {
         })
         .createTable('howto', tbl => {
             tbl.increments('id')
-            tbl.string('name', 128).notNullable().unique()
-            tbl.string('description', 128).notNullable()
+            tbl.string('name', 300).notNullable().unique()
+            tbl.string('description', 300).notNullable()
             tbl.string('steps', 2000).notNullable()
             tbl.string('category', 128).notNullable()
             tbl.string('complexity', 128)
