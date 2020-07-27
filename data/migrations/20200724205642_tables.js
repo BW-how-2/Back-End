@@ -15,7 +15,7 @@ exports.up = function (knex) {
             tbl.increments('id')
             tbl.string('name', 128).notNullable().unique()
             tbl.string('description', 128).notNullable()
-            tbl.string('steps', 300).notNullable()
+            tbl.string('steps', 500).notNullable()
             tbl.string('category', 128).notNullable()
             tbl.string('complexity', 128)
         })
