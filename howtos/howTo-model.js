@@ -34,7 +34,7 @@ function updateHowTo(changes, id) {
 function deleteHowTo(id) {
     return db('howto')
         .where({ id })
-        .del(id)
+        .del()
 }
 
 function getByCategory(category) {
