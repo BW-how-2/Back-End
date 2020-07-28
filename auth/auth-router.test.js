@@ -6,7 +6,7 @@ const db = require('../data/db-config')
 
 describe('Login/Register end point tests', function () {
     describe('POST tests', function () {
-        beforeAll(async () => {
+        beforeEach(async () => {
             await db('users').truncate()
         })
         it('/register should return status 201', function () {

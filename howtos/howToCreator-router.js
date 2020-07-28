@@ -36,9 +36,9 @@ router.put('/:id', (req, res) => {
         })
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
     const { id } = req.params
-    HowTos.deleteHowTo(id)
+    await HowTos.deleteHowTo(id)
         .then(deleted => {
             if (deleted) {
                 res.status(200).json({ Removed: `How-to with id: ${id}` })
