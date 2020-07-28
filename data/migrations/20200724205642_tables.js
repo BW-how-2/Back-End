@@ -9,7 +9,7 @@ exports.up = function (knex) {
             tbl.increments('id')
             tbl.string('username').notNullable()
             tbl.string('password').notNullable()
-            tbl.integer("role").unsigned().references("roles.id").onDelete("RESTRICT").onUpdate("CASCADE");
+            tbl.integer("role").unsigned().references("roles.id").onDelete("CASCADE").onUpdate("CASCADE");
         })
         .createTable('howto', tbl => {
             tbl.increments('id')
