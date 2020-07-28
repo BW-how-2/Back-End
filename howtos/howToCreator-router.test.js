@@ -22,8 +22,8 @@ describe('Creator end point tests', function () {
                 .then(async result => token = result.body.token)
             return supertest(server)
                 .post('/api/auth/howto/creator')
-                .send({ name: 'test 2', description: 'test', steps: 'test', category: 'test' })
                 .set({ authorization: token })
+                .send({ name: 'test 2', description: 'test', steps: 'test', category: 'test' })
                 .then(res => {
                     expect(res.status).toBe(201)
                     expect(res.type).toMatch(/json/i)
