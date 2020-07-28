@@ -41,6 +41,7 @@ router.delete('/:id', async (req, res) => {
     await HowTos.deleteHowTo(id)
         .then(deleted => {
             if (deleted) {
+                console.log(deleted)
                 res.status(200).json({ Removed: `How-to with id: ${id}` })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find How-to with that id' })
